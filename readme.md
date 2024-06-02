@@ -7,6 +7,7 @@ This project is a Django-based RESTful API for managing playlist data. It provid
 - Django: A high-level Python web framework for building web applications.
 - Django Rest Framework (DRF): A powerful and flexible toolkit for building Web APIs in Django.
 
+<pre>
 
 viv_takehome/
 │
@@ -28,6 +29,7 @@ viv_takehome/
 ├──-- urls.py
 └──-- wsgi.py
 
+</pre>
 
 - `api_manager/`: Django app containing models, views, serializers, and URL configurations.
 - `playlist.json`: JSON file containing playlist data.
@@ -46,15 +48,15 @@ This project uses the default SQLite database provided by Django for simplicity.
   - Description: Endpoint for fetching all playlist details.
   - Method: GET
   - Parameters:
-  - `page`: Page number
-  - `page_size`: Number of items per page
+    - `page`: Page number
+    - `page_size`: Number of items per page
 - **Fetch Playlist Detail**: `GET /v1/api/playlist-data/field`
-  - Description: Endpoint for fetching playlist details based on the title.
+  - Description: Endpoint for fetching playlist details based on the a field,currently only takes title.
   - Method: GET
   - Query Param:
     - `title`: Title of the playlist
-- **Update Star Rating**: `PATCH /v1/api/playlist-data/<title>`
-  - Description: Endpoint for updating the star rating of a playlist based on the title.
+- **Update Star Rating**: `PATCH /v1/api/playlist-data/field`
+  - Description: Endpoint for updating the star rating of a playlist based on a field, currently supported title.
   - Method: PATCH
   - Query Param:
     - `title`: Title of the playlist
