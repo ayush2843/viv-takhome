@@ -1,4 +1,4 @@
-# Playlist Data Management API
+# Playlist Data Management
 
 This project is a Django-based RESTful API for managing playlist data. It provides endpoints for loading playlist data from a JSON file, fetching playlist details, and updating star ratings.
 
